@@ -1,17 +1,17 @@
-import express from "express";
+import express, { Application } from "express";
 import config from "./config";
 import Router from "./router";
 class Server {
+  app: Application = express.application;
   init = () => {
-    //for env.config bla bla
     config();
-    // create express application
-    const app: express.Application = express();
-    // init router
-    Router.init(app);
+    Router.init(this.app);
+    this.listen();
+  };
+  listen = () => {
     const port: unknown = process.env.API_PORT;
     if (port) {
-      app.listen(port, () => {
+      this.app.listen(port, () => {
         console.log(`Port listening at ${port}`);
       });
     }
