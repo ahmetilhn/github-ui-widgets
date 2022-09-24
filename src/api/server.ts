@@ -4,7 +4,7 @@ import Router from "./router";
 class Server {
   app: Application = express();
   init = () => {
-    config();
+    config(this.app);
     Router.init(this.app);
     this.listen();
   };

@@ -1,5 +1,7 @@
+import { Application } from "express";
 import envConfig from "./env.config";
-
-export default () => {
+import handlebarsConfig from "./handlebars.config";
+export default (app: Application) => {
   envConfig();
+  handlebarsConfig(app);
 };
