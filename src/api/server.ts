@@ -1,6 +1,12 @@
+import config from "./config";
 class Server {
-  constructor() {}
-  initApp: () => {
-    
+  constructor() {
+    this.initApp();
+  }
+  initApp = () => {
+    //for env.config bla bla
+    config();
   };
 }
+
+const server = new Server();
