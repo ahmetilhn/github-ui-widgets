@@ -1,8 +1,8 @@
+import { AxiosResponse } from "axios";
 import baseHTTP from "../plugins/axios.plugin";
-import IUser from "../types/IUser";
 
 class UserService {
-  public getUserByUsername = async (username: string): Promise<IUser> => {
+  public getUserByUsername = async (username: string): Promise<AxiosResponse> => {
     return baseHTTP.get(`/users/${username}`);
   };
 }

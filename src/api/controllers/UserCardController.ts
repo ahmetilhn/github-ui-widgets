@@ -1,10 +1,19 @@
+import { AxiosResponse } from "axios";
 import { NextFunction, Request, Response } from "express";
 import UserService from "../services/UserService";
+import IUser from "../types/IUser";
 class UserCardController {
   public get = async (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.params);
-    await UserService.getUserByUsername(req.params.username);
-    res.render("user-card");
+    const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
+      req.params.username
+    );
+    if (!response.data) {
+      res.status(404).json({ msg: "User not found" });
+      return;
+    }
+    res.render("user-card", {
+      userData: response.data,
+    });
   };
 }
 export default new UserCardController();
