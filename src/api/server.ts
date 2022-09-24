@@ -2,7 +2,7 @@ import express, { Application } from "express";
 import config from "./config";
 import Router from "./router";
 class Server {
-  app: Application = express.application;
+  app: Application = express();
   init = () => {
     config();
     Router.init(this.app);
