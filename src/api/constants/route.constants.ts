@@ -1,6 +1,6 @@
 export default {
   userCard: {
-    path: "/user-card",
+    path: "/:username/user-card",
     name: "userCard",
   },
 };

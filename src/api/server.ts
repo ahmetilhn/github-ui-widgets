@@ -6,6 +6,7 @@ class Server {
   init = () => {
     config(this.app);
     Router.init(this.app);
+    this.app.use(express.json({ limit: "100mb" }));
     this.listen();
   };
   listen = () => {
