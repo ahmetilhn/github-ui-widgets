@@ -7,6 +7,10 @@ class Server {
     config(this.app);
     Router.init(this.app);
     this.app.use(express.json({ limit: "100mb" }));
+    this.app.use(
+      "/static",
+      express.static(process.cwd() + "/src/views/public")
+    );
     this.listen();
   };
   listen = () => {

@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+.user-card {
+  width: 300px;
+  height: 240px;
+  background-color: white; }
+
+[default-content-layout] {
+  border: 2px solid #2e363c;
+  border-radius: 10px; }
