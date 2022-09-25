@@ -2,12 +2,12 @@
 
 ## Routes
 
-- `:username/user-card`
+- `:username/profile`
 - Coming soon...
 
 ## Route Structure
 
-#### User Card
+#### Profile
 
 - `:username/user-card`
 - Allows you to retrieve a user's information such as followers, following, public repositories, gists
@@ -17,10 +17,10 @@
 - **_Usage_**:
   ```html
   <iframe
-    title="Github User Card"
+    title="Github User Profile"
     width="310px"
     height="340px"
-    src="http://localhost:5555/ahmetilhan24/user-card"
+    src="http://localhost:5555/ahmetilhan24/profile"
   ></iframe>
   ```
 
