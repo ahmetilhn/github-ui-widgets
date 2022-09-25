@@ -46,12 +46,12 @@
 }
 
 .repository-card {
-  width: 90%;
+  width: 100%;
   height: auto;
   border: 1px solid $gray-one;
   border-radius: 8px;
   padding: 20px;
-  margin: 5px;
+  margin: 5px 0;
   &__title {
     font-size: 18px;
     font-weight: bold;
@@ -114,6 +114,8 @@
 .widget-header {
   width: 100%;
   height: 48px;
+  justify-content: space-between;
+  background-color: $dark-one;
   &__title {
     font-size: 18px;
     color: $gray-three;

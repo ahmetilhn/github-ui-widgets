@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none; }
+  outline: none;
+  box-sizing: border-box; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -60,7 +61,7 @@ body {
         font-size: 12px; }
 
 .repository-list {
-  padding: 12px;
+  padding: 10px 12px;
   width: 340px;
   height: 330px;
   background-color: white;
@@ -111,12 +112,12 @@ body {
   position: relative; }
 
 .repository-card {
-  width: 90%;
+  width: 100%;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 5px; }
+  margin: 5px 0; }
   .repository-card__title {
     font-size: 18px;
     font-weight: bold;
@@ -166,7 +167,9 @@ body {
 
 .widget-header {
   width: 100%;
-  height: 48px; }
+  height: 48px;
+  justify-content: space-between;
+  background-color: #25272c; }
   .widget-header__title {
     font-size: 18px;
     color: #818181; }
