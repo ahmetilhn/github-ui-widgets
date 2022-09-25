@@ -2,9 +2,10 @@
   <div
     class="repository-list bordered-container flex--column column--top--center"
   >
+  {{> widget-header}}
     {{#each repositories}}
       <div class="repository-card flex--column column--middle--left">
-        <h2 class="repository-card__title">{{name}}</h2>
+        <h3 class="repository-card__title">{{name}}</h3>
         {{#if description}}
           <span class="repository-card__description">{{description}}</span>
         {{/if}}

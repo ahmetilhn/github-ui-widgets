@@ -163,3 +163,12 @@ body {
   font-weight: bold;
   margin-bottom: 2px;
   margin-right: 3px; }
+
+.widget-header {
+  width: 100%;
+  height: 48px; }
+  .widget-header__title {
+    font-size: 18px;
+    color: #818181; }
+    .widget-header__title strong {
+      color: #25272c; }
