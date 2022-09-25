@@ -1,22 +1,20 @@
 import fs from "fs";
 import logConstants from "../constants/log.constants";
 import LogTypes from "../types/LogTypes";
+import dayjs from "dayjs";
 class ErrorHandler {
-  private createLog = (type: string, errPayload: string): void => {
-    fs.writeFile(
+  private createLog = (type: string, msg: unknown): void => {
+    fs.writeFileSync(
       logConstants[type.toUpperCase()].dir +
-        `${type + "_" + new Date().toISOString().slice(0, 10)}.txt`,
-      errPayload,
-      (err) => {
-        if (err) console.log(err);
-      }
+        `${type + "_" + dayjs().format()}.txt`,
+      JSON.stringify(msg)
     );
   };
   public critical = (err: unknown): void => {
-    this.createLog(LogTypes.CRITICAL, JSON.stringify(err));
+    this.createLog(LogTypes.CRITICAL, err);
   };
   public basic = (err: unknown): void => {
-    this.createLog(LogTypes.BASIC, JSON.stringify(err));
+    this.createLog(LogTypes.BASIC, err);
   };
 }
 
