@@ -117,7 +117,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 5px 0; }
+  margin: 5px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.125); }
   .repository-card__title {
     font-size: 18px;
     font-weight: bold;
@@ -167,11 +168,23 @@ body {
 
 .widget-header {
   width: 100%;
-  height: 48px;
-  justify-content: space-between;
-  background-color: #25272c; }
-  .widget-header__title {
-    font-size: 18px;
-    color: #818181; }
-    .widget-header__title strong {
-      color: #25272c; }
+  height: 60px;
+  background-color: #25272c;
+  padding: 0 12px; }
+  .widget-header__info .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #8ec194; }
+  .widget-header__info .user-info {
+    margin-left: 10px; }
+    .widget-header__info .user-info__username {
+      font-size: 15px;
+      color: #b3b3b3; }
+      .widget-header__info .user-info__username strong {
+        color: #25272c; }
+    .widget-header__info .user-info__content-title {
+      font-size: 11px;
+      color: #818181;
+      font-weight: 400;
+      margin-top: 3px; }

@@ -1,4 +1,9 @@
-<header class="widget-header flex--row row--middle--center">
-  <span class="widget-header__title">Repositories of
-    <strong>{{repositories.0.owner.login}}</strong></span>
+<header class="widget-header flex--row row--middle--left">
+  <div class="widget-header__info flex--row column--middle--center">
+    <img class="user-avatar" src="{{user.avatar_url}}" alt="" />
+    <div class="user-info flex--column column--middle--left">
+      <span class="user-info__username">{{user.login}}</span>
+      <span class="user-info__content-title">{{title}}</span>
+    </div>
+  </div>
 </header>
