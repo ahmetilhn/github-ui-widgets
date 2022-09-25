@@ -29,3 +29,17 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.info-icon {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  fill: $white;
+  opacity: 0.4;
+  z-index: 112;
+  cursor: pointer;
+}
+.widget-layout {
+  position: relative;
+}

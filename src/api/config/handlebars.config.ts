@@ -8,7 +8,9 @@ export default (app: Application) => {
       extname: ".hbs",
       defaultLayout: "main",
       layoutsDir: process.cwd() + "/src/views/layouts/",
+      partialsDir: process.cwd() + "/src/views/layouts",
     })
   );
+
   app.set("view engine", "hbs");
 };
