@@ -12,11 +12,11 @@ class ErrorHandler {
       }
     );
   };
-  public critical = (err: string): void => {
-    this.createLog(LogTypes.CRITICAL, err);
+  public critical = (err: unknown): void => {
+    this.createLog(LogTypes.CRITICAL, JSON.stringify(err));
   };
-  public basic = (err: string): void => {
-    this.createLog(LogTypes.BASIC, err);
+  public basic = (err: unknown): void => {
+    this.createLog(LogTypes.BASIC, JSON.stringify(err));
   };
 }
 

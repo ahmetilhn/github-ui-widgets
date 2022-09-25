@@ -7,7 +7,7 @@ class UserCardController {
     const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
       req.params.username
     );
-    if (!response.data) {
+    if (!response) {
       res.status(404).json({ msg: "User not found" });
       return;
     }
