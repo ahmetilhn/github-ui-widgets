@@ -11,8 +11,7 @@ body {
 .user-card {
   width: 300px;
   height: 330px;
-  background-color: white;
-  position: relative; }
+  background-color: white; }
   .user-card__user-info {
     width: 100%;
     height: 240px;
@@ -60,10 +59,18 @@ body {
         color: #b3b3b3;
         font-size: 12px; }
 
+.repository-list {
+  padding: 12px;
+  width: 340px;
+  height: 330px;
+  background-color: white;
+  position: relative; }
+
 .bordered-container {
   border: 2px solid #25272c;
   border-radius: 18px;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow: auto; }
 
 .primary-btn {
   height: 30px;
@@ -102,3 +109,57 @@ body {
 
 .widget-layout {
   position: relative; }
+
+.repository-card {
+  width: 90%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 5px; }
+  .repository-card__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #25272c; }
+  .repository-card__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: #b3b3b3;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .repository-card__info {
+    margin-top: 8px; }
+    .repository-card__info .info-item {
+      margin-right: 10px;
+      height: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .repository-card__info .info-item__circle {
+        width: 12px;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #3cb54a;
+        margin-right: 5px; }
+      .repository-card__info .info-item__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px; }
+        .repository-card__info .info-item__icon--star svg {
+          fill: #f1e05a; }
+      .repository-card__info .info-item__text {
+        font-size: 11px;
+        color: #ddd;
+        font-weight: 400; }
+
+.repository-topic {
+  display: inline-block;
+  list-style: none;
+  background-color: #ddeeff;
+  color: #5596e5;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-right: 3px; }

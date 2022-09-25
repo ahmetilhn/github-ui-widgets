@@ -2,7 +2,6 @@
   width: 300px;
   height: 330px;
   background-color: $white;
-  position: relative;
   &__user-info {
     width: 100%;
     height: 240px;
@@ -61,4 +60,12 @@
       }
     }
   }
+}
+
+.repository-list {
+  padding: 12px;
+  width: 340px;
+  height: 330px;
+  background-color: $white;
+  position: relative;
 }

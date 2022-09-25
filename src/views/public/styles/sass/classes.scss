@@ -2,6 +2,7 @@
   border: 2px solid $dark-one;
   border-radius: 18px;
   overflow: hidden;
+  overflow: auto;
 }
 .primary-btn {
   height: 30px;
@@ -42,4 +43,70 @@
 }
 .widget-layout {
   position: relative;
+}
+
+.repository-card {
+  width: 90%;
+  height: auto;
+  border: 1px solid $gray-one;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 5px;
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $dark-one;
+  }
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: $gray-two;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  &__info {
+    margin-top: 8px;
+    .info-item {
+      $height: 12px;
+      margin-right: 10px;
+      height: $height;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__circle {
+        width: $height;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $green;
+        margin-right: 5px;
+      }
+      &__icon {
+        width: $height + 4px;
+        height: $height + 4px;
+        margin-right: 5px;
+        &--star {
+          svg {
+            fill: $yellow;
+          }
+        }
+      }
+      &__text {
+        font-size: 11px;
+        color: $gray-one;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.repository-topic {
+  display: inline-block;
+  list-style: none;
+  background-color: $blue-two;
+  color: $blue-one;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-right: 3px;
 }

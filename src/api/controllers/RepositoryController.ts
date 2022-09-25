@@ -4,15 +4,14 @@ import RepositoryService from "../services/RepositoryService";
 import IRepository from "../types/IRepository";
 class RepositoryController {
   public get = async (req: Request, res: Response, next: NextFunction) => {
-    const response: AxiosResponse<IRepository> = await RepositoryService.getReposByUsername(
-      req.params.username
-    );
+    const response: AxiosResponse<IRepository> =
+      await RepositoryService.getReposByUsername(req.params.username);
     if (!response) {
       res.status(404).json({ msg: "User not found" });
       return;
     }
-    res.render("user-card", {
-      userData: response.data,
+    res.render("repository-list", {
+      repositories: response.data,
     });
   };
 }

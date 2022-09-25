@@ -1,0 +1,44 @@
+<section>
+  <div
+    class="repository-list bordered-container flex--column column--top--center"
+  >
+    {{#each repositories}}
+      <div class="repository-card flex--column column--middle--left">
+        <h2 class="repository-card__title">{{name}}</h2>
+        {{#if description}}
+          <span class="repository-card__description">{{description}}</span>
+        {{/if}}
+        {{#if topics.length}}
+          <ul class="repository-card__topics">
+            {{#each topics}}
+              <li class="repository-topic">{{this}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        <div class="repository-card__info flex--row row--middle--left">
+          {{#if language}}
+            <div class="info-item">
+              <span class="info-item__circle"></span>
+              <span class="info-item__text">{{language}}</span>
+            </div>
+          {{/if}}
+          <div class="info-item">
+            <span class="info-item__icon info-item__icon--star">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g
+                  data-name="Layer 2"
+                ><g data-name="star"><rect
+                      width="24"
+                      height="24"
+                      opacity="0"
+                      transform="rotate(90 12 12)"
+                    ></rect><path
+                      d="M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .81-.68l5.7-.83 2.51-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .81.68 1 1 0 0 1-.25 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18z"
+                    ></path></g></g></svg>
+            </span>
+            <span class="info-item__text">{{stargazers_count}}</span>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
