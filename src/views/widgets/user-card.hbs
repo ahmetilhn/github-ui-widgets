@@ -1,9 +1,15 @@
 <section>
-  <div class="user-card bordered-container flex--column column--middle--center">
+  <div class="user-card bordered-container flex--column column--top--center">
     <div class="user-card__top flex--column column--middle--center">
-      <img src="https://avatars.githubusercontent.com/u/60369989?v=4" alt="" />
-      <span>{{userData.name}}</span>
-      {{userData.company}}
+      <div class="user flex--column column--middle--center">
+        <img
+          class="user__avatar"
+          src="https://avatars.githubusercontent.com/u/60369989?v=4"
+          alt=""
+        />
+        <span class="user__name">{{userData.name}}</span>
+        <span class="user__company">{{userData.company}}</span>
+      </div>
     </div>
   </div>
 </section>
