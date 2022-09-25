@@ -38,7 +38,7 @@ baseHTTP.interceptors.response.use(
       return;
     }
     console.error(error.response.data);
-    ErrorHandler.critical(error.response.data);
+    ErrorHandler.basic(`${error.response.data} ${error.response.status}`);
     const status = statusCodes.find(
       (item: IHttpStatus) => item.status === error.response?.status
     );
