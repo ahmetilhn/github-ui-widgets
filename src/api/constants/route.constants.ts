@@ -1,6 +1,6 @@
 export default {
-  userCard: {
-    path: "/:username/user-card",
-    name: "userCard",
+  profile: {
+    path: "/:username/profile",
+    name: "profile",
   },
 };
