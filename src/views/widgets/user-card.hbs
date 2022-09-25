@@ -1,6 +1,6 @@
 <section>
   <div class="user-card bordered-container flex--column column--top--center">
-    <div class="user-card__top flex--column column--middle--center">
+    <div class="user-card__user-info flex--column column--middle--center">
       <div class="user flex--column column--middle--center">
         <img
           class="user__avatar"
@@ -16,5 +16,24 @@
         href="{{userData.html_url}}"
       >Folow</a>
     </div>
+    <div class="user-card__work-info flex--row row--middle--center">
+      <div class="info-card">
+        <p>{{userData.public_repos}}</p>
+        <span>Repositories</span>
+      </div>
+      <div class="info-card">
+        <p>{{userData.public_gists}}</p>
+        <span>Gists</span>
+      </div>
+      <div class="info-card">
+        <p>{{userData.followers}}</p>
+        <span>Followers</span>
+      </div>
+      <div class="info-card">
+        <p>{{userData.following}}</p>
+        <span>Following</span>
+      </div>
+    </div>
+    <span class="bottom-bar"></span>
   </div>
 </section>

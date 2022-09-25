@@ -1,8 +1,9 @@
 .user-card {
   width: 300px;
-  height: 320px;
+  height: 330px;
   background-color: $white;
-  &__top {
+  position: relative;
+  &__user-info {
     width: 100%;
     height: 240px;
     background-color: $dark-one;
@@ -15,7 +16,7 @@
         border-radius: 50%;
         overflow: hidden;
         object-fit: cover;
-        border: 2px solid $white;
+        border: 2px solid $yellow;
         margin-bottom: 20px;
       }
       &__name {
@@ -40,6 +41,24 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 50%);
+    }
+  }
+  &__work-info {
+    width: 100%;
+    margin-top: 26px;
+    .info-card {
+      width: calc(25% - 8px);
+      text-align: center;
+      p {
+        font-size: 22px;
+        color: $dark-one;
+        font-weight: 700;
+      }
+      span {
+        font-weight: 400;
+        color: $gray-two;
+        font-size: 12px;
+      }
     }
   }
 }
