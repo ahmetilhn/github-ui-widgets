@@ -1,5 +1,5 @@
 import { IRouter, Router } from "express";
-import Repo
+import RepositoryController from "../controllers/RepositoryController";
 
 class RepositoryRouter {
   public router: IRouter = Router({ mergeParams: true });
@@ -7,7 +7,7 @@ class RepositoryRouter {
     this.init();
   }
   init = () => {
-    this.router.route("/").get(UserController.get);
+    this.router.route("/").get(RepositoryController.get);
   };
 }
 
