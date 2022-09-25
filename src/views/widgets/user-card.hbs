@@ -8,8 +8,13 @@
           alt=""
         />
         <span class="user__name">{{userData.name}}</span>
-        <span class="user__company">{{userData.company}}</span>
+        <span class="user__username">@{{userData.login}}</span>
+        <span class="user__bio">{{userData.bio}}</span>
       </div>
+      <a
+        class="primary-btn primary-btn--green"
+        href="{{userData.html_url}}"
+      >Folow</a>
     </div>
   </div>
 </section>

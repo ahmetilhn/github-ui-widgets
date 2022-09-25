@@ -1,4 +1,20 @@
 .bordered-container {
   border: 2px solid $dark-one;
-  border-radius: 10px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.primary-btn {
+  height: 30px;
+  border-radius: 22px;
+  font-size: 14px;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  &--green {
+    background-color: $green;
+    color: $white;
+  }
 }
