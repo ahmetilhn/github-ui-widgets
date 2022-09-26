@@ -4,7 +4,7 @@
   "description": "UI widgets for github with CDN link.",
   "main": "dist/server.js",
   "repository": "https://github.com/ahmetilhan24/github-ui-widgets.git",
-  "author": "Ahmet ilhan <ahmetilhan.dev@gmail.com>",
+  "author": "Ahmet ilhan ahmetilhan.dev@gmail.com",
   "license": "MIT",
   "private": "false",
   "scripts": {
