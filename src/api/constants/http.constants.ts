@@ -1,4 +1,4 @@
-import IHttpStatus from "../types/IHttpStatus";
+import IHttpStatus from "../types/httpStatus.interface";
 
 export const statusCodes: Array<IHttpStatus> = [
   { status: 200, msg: "OK" },

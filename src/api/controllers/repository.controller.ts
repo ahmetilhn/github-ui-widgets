@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { NextFunction, Request, Response } from "express";
-import RepositoryService from "../services/RepositoryService";
-import IRepository from "../types/IRepository";
+import RepositoryService from "../services/repository.service";
+import IRepository from "../types/repository.interface";
 class RepositoryController {
   public get = async (req: Request, res: Response, next: NextFunction) => {
     const response: AxiosResponse<IRepository> =

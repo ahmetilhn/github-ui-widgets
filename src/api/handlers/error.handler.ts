@@ -1,6 +1,6 @@
 import fs from "fs";
 import logConstants from "../constants/log.constants";
-import LogTypes from "../types/LogTypes";
+import LogTypes from "../types/log.enum";
 import dayjs from "dayjs";
 class ErrorHandler {
   private createLog = (type: string, msg: unknown): void => {

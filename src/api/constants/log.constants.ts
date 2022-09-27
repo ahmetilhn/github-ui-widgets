@@ -1,4 +1,4 @@
-import LogTypes from "../types/LogTypes";
+import LogTypes from "../types/log.enum";
 export default {
   CRITICAL: {
     name: LogTypes.CRITICAL,

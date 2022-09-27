@@ -1,5 +1,5 @@
 import { IRouter, Router } from "express";
-import RepositoryController from "../controllers/RepositoryController";
+import RepositoryController from "../controllers/repository.controller";
 
 class RepositoryRouter {
   public router: IRouter = Router({ mergeParams: true });

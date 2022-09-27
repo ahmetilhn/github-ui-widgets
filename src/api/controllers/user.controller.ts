@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios";
 import { NextFunction, Request, Response } from "express";
-import UserService from "../services/UserService";
-import IUser from "../types/IUser";
+import UserService from "../services/user.service";
+import IUser from "../types/user.interface";
 class UserController {
   public get = async (req: Request, res: Response, next: NextFunction) => {
     const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
