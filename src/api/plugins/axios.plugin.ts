@@ -1,5 +1,4 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
-import authConstants from "../constants/auth.constants";
 import axiosConstants from "../constants/axios.constants";
 import { statusCodes } from "../constants/http.constants";
 import IHttpStatus from "../types/httpStatus.interface";
