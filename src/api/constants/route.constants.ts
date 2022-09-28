@@ -7,4 +7,8 @@ export default {
     path: "/:username/repositories",
     name: "repositories",
   },
+  commits: {
+    path: "/repos/:username/:repo/commits",
+    name: "commits",
+  },
 };

@@ -1,12 +1,14 @@
 import express, { Application } from "express";
 import routeConstants from "../constants/route.constants";
-import ProfileRouter from "./profile.routes";
-import RepositoryRouter from "./repository.routes";
+import commitRoutes from "./commit.routes";
+import ProfileRoutes from "./profile.routes";
+import RepositoryRoutes from "./repository.routes";
 class Router {
   router: express.IRouter = express.Router({ mergeParams: true });
   init = (app: Application) => {
-    app.use(routeConstants.profile.path, ProfileRouter.router);
-    app.use(routeConstants.repositories.path, RepositoryRouter.router);
+    app.use(routeConstants.profile.path, ProfileRoutes.router);
+    app.use(routeConstants.repositories.path, RepositoryRoutes.router);
+    app.use(routeConstants.commits.path, commitRoutes.router);
   };
 }
 
