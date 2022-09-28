@@ -18,7 +18,6 @@ class CommitController {
       commit: item.commit,
       author: item.author,
     }));
-    console.log(data[10].author);
     res.render("commits", {
       data: data,
       title: "Commits " + req.params.repo,

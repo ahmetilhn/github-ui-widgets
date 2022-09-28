@@ -94,10 +94,12 @@
       width: 22px;
       min-width: 22px;
       fill: $green-three;
+      margin-right: 10px;
     }
     &__info {
       .info__avatar {
         width: 23px;
+        min-width: 23px;
         height: 23px;
         object-fit: cover;
         overflow: hidden;
@@ -108,7 +110,6 @@
         }
       }
       .info__msg {
-        max-width: calc(100% - 23px);
         font-size: 12px;
         color: $gray-three;
         font-weight: 600;

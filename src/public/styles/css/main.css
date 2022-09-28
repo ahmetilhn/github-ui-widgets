@@ -89,9 +89,11 @@ body {
     .commit-list .commit svg {
       width: 22px;
       min-width: 22px;
-      fill: #8ec194; }
+      fill: #8ec194;
+      margin-right: 10px; }
     .commit-list .commit__info .info__avatar {
       width: 23px;
+      min-width: 23px;
       height: 23px;
       object-fit: cover;
       overflow: hidden;
@@ -100,7 +102,6 @@ body {
       .commit-list .commit__info .info__avatar--not {
         transform: scale(1.35); }
     .commit-list .commit__info .info__msg {
-      max-width: calc(100% - 23px);
       font-size: 12px;
       color: #818181;
       font-weight: 600;

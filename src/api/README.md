@@ -3,7 +3,8 @@
 ## Routes
 
 - `:username/profile`
-- Coming soon...
+- `:username/:repo/commits`    
+- `:username/repositories`
 
 ## Route Structure
 
@@ -40,6 +41,25 @@
     width="350px"
     height="340px"
     src="http://localhost:5555/ahmetilhan24/repositories"
+  ></iframe>
+  ```
+
+> Not responsive
+
+#### Commits
+
+- `:username/repoName/commits`
+- Lets you get commits of public repositories
+- **_Params_**: `username: string | required, repoName: string | required` Your Github username E.G. **`repos/ahmetilhan24/github-ui-widgets/commits`**
+- **_Response_**:
+  **`commit msg, commit author`**
+- **_Usage_**:
+  ```html
+  <iframe
+    title="Github Commits"
+    width="350px"
+    height="340px"
+    src="http://localhost:5555/ahmetilhan24/github-ui-widgets/commits"
   ></iframe>
   ```
 
