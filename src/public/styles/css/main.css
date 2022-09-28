@@ -75,23 +75,21 @@ body {
   position: relative; }
   .commit-list .commit {
     width: 100%;
-    padding: 6px 0; }
+    padding: 8px 0;
+    position: relative; }
+    .commit-list .commit hr {
+      width: 2px;
+      height: 10px;
+      display: block;
+      background-color: #ddd;
+      position: absolute;
+      border: none;
+      left: 9px;
+      top: -4px; }
     .commit-list .commit svg {
       width: 22px;
       min-width: 22px;
-      fill: #8ec194;
-      margin-right: 9px;
-      position: relative; }
-      .commit-list .commit svg::after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 2px;
-        height: 10px;
-        background-color: #25272c;
-        top: -20px;
-        z-index: 222; }
+      fill: #8ec194; }
     .commit-list .commit__info .info__avatar {
       width: 23px;
       height: 23px;
@@ -102,7 +100,7 @@ body {
       .commit-list .commit__info .info__avatar--not {
         transform: scale(1.35); }
     .commit-list .commit__info .info__msg {
-      max-width: calc(100% - 63px);
+      max-width: calc(100% - 23px);
       font-size: 12px;
       color: #818181;
       font-weight: 600;

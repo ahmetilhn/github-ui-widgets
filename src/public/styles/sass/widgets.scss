@@ -78,24 +78,22 @@
   position: relative;
   .commit {
     width: 100%;
-    padding: 6px 0;
+    padding: 8px 0;
+    position: relative;
+    hr {
+      width: 2px;
+      height: 10px;
+      display: block;
+      background-color: $gray-one;
+      position: absolute;
+      border: none;
+      left: 9px;
+      top: -4px;
+    }
     svg {
       width: 22px;
       min-width: 22px;
       fill: $green-three;
-      margin-right: 9px;
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 2px;
-        height: 10px;
-        background-color: $dark-one;
-        top: -20px;
-        z-index: 222;
-      }
     }
     &__info {
       .info__avatar {
@@ -110,7 +108,7 @@
         }
       }
       .info__msg {
-        max-width: calc(100% - 63px);
+        max-width: calc(100% - 23px);
         font-size: 12px;
         color: $gray-three;
         font-weight: 600;

@@ -21,6 +21,7 @@ class CommitController {
     console.log(data[10].author);
     res.render("commits", {
       data: data,
+      title: "Commits " + req.params.repo,
     });
   };
 }
