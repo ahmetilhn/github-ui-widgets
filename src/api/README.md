@@ -26,6 +26,25 @@
 
 > Not responsive
 
+#### Repositories
+
+- `:username/repositories`
+- Lets you get public repositories
+- **_Params_**: `username: string | required` Your Github username E.G. **`/ahmetilhan24/repositories`**
+- **_Response_**:
+  **`name, description, topics, language, start, forks`**
+- **_Usage_**:
+  ```html
+  <iframe
+    title="Github User Repositories"
+    width="350px"
+    height="340px"
+    src="http://localhost:5555/ahmetilhan24/repositories"
+  ></iframe>
+  ```
+
+> Not responsive
+
 ## LICENSE
 
 **MIT**
