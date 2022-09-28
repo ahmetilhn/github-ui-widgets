@@ -1,5 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/api/server.ts",
   target: "node",
@@ -20,4 +21,9 @@ module.exports = {
     filename: "server.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "./src/views", to: "views" }],
+    }),
+  ],
 };
