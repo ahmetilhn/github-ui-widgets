@@ -1,4 +1,14 @@
 <section class="bordered-container">
-  {{> widget-header title="Commits" user=repositories.0.owner}}
-    {{ commits }}
+  {{> widget-header title="Commits" user=data.10.author}}
+    <div class="commit-list flex--column column--middle-left">
+        {{#each data}}
+          <div class="commit flex--row row--middle--left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M45 27H32.448c-1.239 3.489-4.533 6-8.448 6-3.912 0-7.209-2.511-8.448-6H3a3 3 0 1 1 0-6h12.552c1.239-3.486 4.536-6 8.448-6 3.915 0 7.209 2.514 8.448 6H45c1.659 0 3 1.341 3 3s-1.341 3-3 3zm-21-6a3 3 0 1 0 0 6c1.659 0 3-1.341 3-3s-1.341-3-3-3z"/></svg>
+          <div>
+            <img src="{{author.avatar_url}}" alt="">
+            <p class="commit__msg">{{commit.message}}</p>
+          </div>
+        </div>
+        {{/each}}
+    </div>
 </section>

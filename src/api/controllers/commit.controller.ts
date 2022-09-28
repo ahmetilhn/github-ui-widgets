@@ -5,7 +5,7 @@ import CommitService from "../services/commit.service";
 import ICommit from "../types/commit.interface";
 class CommitController {
   public get = async (req: Request, res: Response, next: NextFunction) => {
-    const response: AxiosResponse<ICommit> =
+    const response: AxiosResponse<Array<ICommit>> =
       await CommitService.getCommitsByRepo(
         req.params.username,
         req.params.repo
@@ -14,8 +14,13 @@ class CommitController {
       res.status(404).json({ msg: errorConstants.NOT_RESULT("Commit") });
       return;
     }
+    const data = response.data.map((item: ICommit) => ({
+      commit: item.commit,
+      author: item.author,
+    }));
+    console.log(data[10].author);
     res.render("commits", {
-      commits: response.data,
+      data: data,
     });
   };
 }

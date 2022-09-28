@@ -69,3 +69,33 @@
   background-color: $white;
   position: relative;
 }
+
+.commit-list {
+  padding: 5px 12px;
+  width: 340px;
+  height: 330px;
+  background-color: $white;
+  position: relative;
+  .commit {
+    width: 100%;
+    padding: 6px 0;
+    svg {
+      width: 22px;
+      fill: $green-three;
+      margin-right: 9px;
+    }
+    img {
+      width: 26px;
+      height: 26px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    &__msg {
+      font-size: 12px;
+      color: $gray-three;
+      font-weight: 600;
+    }
+  }
+}

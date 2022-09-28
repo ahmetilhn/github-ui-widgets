@@ -67,6 +67,31 @@ body {
   background-color: white;
   position: relative; }
 
+.commit-list {
+  padding: 5px 12px;
+  width: 340px;
+  height: 330px;
+  background-color: white;
+  position: relative; }
+  .commit-list .commit {
+    width: 100%;
+    padding: 6px 0; }
+    .commit-list .commit svg {
+      width: 22px;
+      fill: #8ec194;
+      margin-right: 9px; }
+    .commit-list .commit img {
+      width: 26px;
+      height: 26px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 10px; }
+    .commit-list .commit__msg {
+      font-size: 12px;
+      color: #818181;
+      font-weight: 600; }
+
 .bordered-container {
   border: 2px solid #25272c;
   border-radius: 18px;
