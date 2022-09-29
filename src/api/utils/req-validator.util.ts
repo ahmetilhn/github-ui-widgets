@@ -1,14 +1,19 @@
 import { Request } from "express";
 
-export const usernameValidator = (req: Request): boolean => {
-  if (!!req.params?.username) {
+export const usernameValidator = (params: {
+  [key: string]: string;
+}): boolean => {
+  //@ts-ignored
+  if (!!params?.username) {
     return true;
   }
   return false;
 };
 
-export const repoNameValidator = (req: Request): boolean => {
-  if (!!req.params?.repo) {
+export const repoNameValidator = (params: {
+  [key: string]: string;
+}): boolean => {
+  if (!!params?.repo) {
     return true;
   }
   return false;
