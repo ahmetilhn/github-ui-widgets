@@ -14,7 +14,7 @@ class CommitController implements IController {
     res: Response,
     next: NextFunction
   ): Promise<any> {
-    if (!usernameValidator(req) || !repoNameValidator(req)) {
+    if (!usernameValidator(req.params) || !repoNameValidator(req.params)) {
       res.status(400).json({
         msg: errorConstants.BAD_REQUEST,
       });

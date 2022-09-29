@@ -10,7 +10,7 @@ class RepositoryController {
     res: Response,
     next: NextFunction
   ): Promise<any> {
-    if (!usernameValidator(req)) {
+    if (!usernameValidator(req.params)) {
       res.status(400).json({
         msg: errorConstants.BAD_REQUEST + "Username is not defined",
       });
