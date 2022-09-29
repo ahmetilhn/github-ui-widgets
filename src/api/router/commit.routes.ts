@@ -1,14 +1,9 @@
-import { IRouter, Router } from "express";
 import CommitController from "../controllers/commit.controller";
-
-class CommitRouter {
-  public router: IRouter = Router({ mergeParams: true });
+import BaseRouter from "./base.routes";
+class CommitRouter extends BaseRouter {
   constructor() {
-    this.init();
+    super(CommitController);
   }
-  init = () => {
-    this.router.route("/").get(CommitController.get);
-  };
 }
 
 export default new CommitRouter();

@@ -6,7 +6,7 @@ class ProfileRouter {
   constructor() {
     this.init();
   }
-  init = () => {
+  init = (): void => {
     this.router.route("/").get(UserController.get);
   };
 }
