@@ -4,12 +4,22 @@ import errorConstants from "../constants/error.constants";
 import CommitService from "../services/commit.service";
 import ICommit from "../types/commit.interface";
 import IController from "../types/controller.interface";
+import {
+  repoNameValidator,
+  usernameValidator,
+} from "../utils/req-validator.util";
 class CommitController implements IController {
   public async get(
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<boolean> {
+  ): Promise<any> {
+    if (!usernameValidator(req) || !repoNameValidator(req)) {
+      res.status(400).json({
+        msg: errorConstants.BAD_REQUEST,
+      });
+      return next(errorConstants.BAD_REQUEST);
+    }
     const response: AxiosResponse<Array<ICommit>> =
       await CommitService.getCommitsByRepo(
         req.params.username,

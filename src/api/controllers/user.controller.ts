@@ -3,17 +3,18 @@ import { NextFunction, Request, Response } from "express";
 import errorConstants from "../constants/error.constants";
 import UserService from "../services/user.service";
 import IUser from "../types/user.interface";
+import { usernameValidator } from "../utils/req-validator.util";
 class UserController {
   public async get(
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<boolean> {
-    if (!req.params.username) {
-      res.status(404).json({
-        msg: errorConstants.BAD_REQUEST,
+  ): Promise<any> {
+    if (!usernameValidator(req)) {
+      res.status(400).json({
+        msg: errorConstants.BAD_REQUEST + "Username is not defined",
       });
-      return;
+      return next(errorConstants.BAD_REQUEST);
     }
     const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
       req.params.username
