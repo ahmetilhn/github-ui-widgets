@@ -9,6 +9,12 @@ class UserController {
     res: Response,
     next: NextFunction
   ): Promise<boolean> {
+    if (!req.params.username) {
+      res.status(404).json({
+        msg: errorConstants.BAD_REQUEST,
+      });
+      return;
+    }
     const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
       req.params.username
     );
