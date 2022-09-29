@@ -1,7 +1,12 @@
 import request from "supertest";
-import server from "../src/api/server";
-describe("Comms api works fine", () => {
+import { app } from "./test-util";
+describe("Commits api works fine", () => {
   it("explodes without username", async () => {
-    const res = await request(server);
+    const res = await request(app).get("/ahmetilhan24/profile");
+    expect(res.statusCode).toEqual(200);
+  });
+  it("explodes without username", async () => {
+    const res = await request(app).get("/ahmetilhan24/repositories");
+    expect(res.statusCode).toEqual(200);
   });
 });
