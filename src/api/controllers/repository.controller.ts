@@ -4,7 +4,11 @@ import errorConstants from "../constants/error.constants";
 import RepositoryService from "../services/repository.service";
 import IRepository from "../types/repository.interface";
 class RepositoryController {
-  public get = async (req: Request, res: Response, next: NextFunction) => {
+  public async get(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<boolean> {
     const response: AxiosResponse<IRepository> =
       await RepositoryService.getReposByUsername(req.params.username);
     if (!response) {
@@ -14,6 +18,6 @@ class RepositoryController {
     res.render("repository-list", {
       repositories: response.data,
     });
-  };
+  }
 }
 export default new RepositoryController();

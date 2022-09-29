@@ -1,14 +1,10 @@
-import { IRouter, Router } from "express";
+import BaseRouter from "./base.routes";
 import UserController from "../controllers/user.controller";
 
-class ProfileRouter {
-  public router: IRouter = Router({ mergeParams: true });
+class ProfileRouter extends BaseRouter {
   constructor() {
-    this.init();
+    super(UserController);
   }
-  init = (): void => {
-    this.router.route("/").get(UserController.get);
-  };
 }
 
 export default new ProfileRouter();

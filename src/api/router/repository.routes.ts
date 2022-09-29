@@ -1,14 +1,10 @@
-import { IRouter, Router } from "express";
 import RepositoryController from "../controllers/repository.controller";
+import BaseRouter from "./base.routes";
 
-class RepositoryRouter {
-  public router: IRouter = Router({ mergeParams: true });
+class RepositoryRouter extends BaseRouter {
   constructor() {
-    this.init();
+    super(RepositoryController);
   }
-  init = () => {
-    this.router.route("/").get(RepositoryController.get);
-  };
 }
 
 export default new RepositoryRouter();

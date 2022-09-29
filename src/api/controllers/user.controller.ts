@@ -4,7 +4,11 @@ import errorConstants from "../constants/error.constants";
 import UserService from "../services/user.service";
 import IUser from "../types/user.interface";
 class UserController {
-  public get = async (req: Request, res: Response, next: NextFunction) => {
+  public async get(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<boolean> {
     const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
       req.params.username
     );
@@ -15,6 +19,6 @@ class UserController {
     res.render("user-card", {
       userData: response.data,
     });
-  };
+  }
 }
 export default new UserController();
