@@ -19,7 +19,7 @@ class RepositoryController {
     const response: AxiosResponse<IRepository> =
       await RepositoryService.getReposByUsername(req.params.username);
     if (!response) {
-      res.status(404).json({ msg: errorConstants.NOT_RESULT("Repository") });
+      res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return;
     }
     res.render("repository-list", {

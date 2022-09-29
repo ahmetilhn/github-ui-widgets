@@ -20,7 +20,7 @@ class UserController {
       req.params.username
     );
     if (!response) {
-      res.status(404).json({ msg: errorConstants.NOT_RESULT("User") });
+      res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return;
     }
     res.render("user-card", {

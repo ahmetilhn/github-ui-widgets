@@ -26,7 +26,7 @@ class CommitController implements IController {
         req.params.repo
       );
     if (!response) {
-      res.status(404).json({ msg: errorConstants.NOT_RESULT("Commit") });
+      res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return false;
     }
     const data = response.data.map((item: ICommit) => ({
