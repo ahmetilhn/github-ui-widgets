@@ -7,8 +7,14 @@ export default (app: Application) => {
     engine({
       extname: ".hbs",
       defaultLayout: "main",
-      layoutsDir: process.cwd() + "/src/views/layouts/",
-      partialsDir: process.cwd() + "/src/views/partials/",
+      layoutsDir:
+        process.env.NODE_ENV === "production"
+          ? "/views/layouts/"
+          : process.cwd() + "/src/views/layouts/",
+      partialsDir:
+        process.env.NODE_ENV === "production"
+          ? "/views/partials/"
+          : process.cwd() + "/src/views/partials/",
     })
   );
   app.set("view engine", "hbs");
