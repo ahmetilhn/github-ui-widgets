@@ -4,7 +4,7 @@ export default {
     name: LogTypes.CRITICAL,
     dir:
       process.env.NODE_ENV === "production"
-        ? process.cwd() + "/dist/logs" + LogTypes.CRITICAL + "/"
+        ? process.cwd() + "/dist/logs/" + LogTypes.CRITICAL + "/"
         : process.cwd() + "/src/api/logs/" + LogTypes.CRITICAL + "/",
     level: LogTypes.CRITICAL,
   },
@@ -12,7 +12,7 @@ export default {
     name: LogTypes.BASIC,
     dir:
       process.env.NODE_ENV === "production"
-        ? process.cwd() + "/dist/logs" + LogTypes.BASIC + "/"
+        ? process.cwd() + "/dist/logs/" + LogTypes.BASIC + "/"
         : process.cwd() + "/src/api/logs/" + LogTypes.BASIC + "/",
     level: LogTypes.BASIC,
   },
