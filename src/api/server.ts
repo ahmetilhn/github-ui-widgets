@@ -10,7 +10,6 @@ class Server {
     config(this.app);
     Router.init(this.app);
     this.app.use(express.json({ limit: "100mb" }));
-    console.log(process.env.NODE_ENV, process.cwd());
     this.app.use(
       "/static",
       express.static(
