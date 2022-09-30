@@ -21,7 +21,7 @@
     title="Github User Profile"
     width="310px"
     height="340px"
-    src="http://localhost:5555/ahmetilhan24/profile"
+    src="https://github-ui-widgets.onrender.com/ahmetilhan24/profile"
   ></iframe>
   ```
 
@@ -40,7 +40,7 @@
     title="Github User Repositories"
     width="350px"
     height="340px"
-    src="http://localhost:5555/ahmetilhan24/repositories"
+    src="https://github-ui-widgets.onrender.com/ahmetilhan24/repositories"
   ></iframe>
   ```
 
@@ -59,7 +59,7 @@
     title="Github Commits"
     width="350px"
     height="340px"
-    src="http://localhost:5555/ahmetilhan24/github-ui-widgets/commits"
+    src="https://github-ui-widgets.onrender.com/ahmetilhan24/github-ui-widgets/commits"
   ></iframe>
   ```
 
