@@ -5,4 +5,5 @@ export default {
   UNKNOWN_ERR: "An unknown error has occurred",
   NOT_RESULT: (relevance: string) => `Not enough ${relevance} found`,
   NOT_FOUND: `Not found`,
+  BAD_REQUEST: "Bad request",
 };

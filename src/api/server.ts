@@ -2,7 +2,10 @@ import express, { Application } from "express";
 import config from "./config";
 import Router from "./router";
 class Server {
-  app: Application = express();
+  public app: Application = express();
+  constructor() {
+    this.init();
+  }
   init = () => {
     config(this.app);
     Router.init(this.app);
@@ -10,9 +13,11 @@ class Server {
     this.app.use("/static", express.static(process.cwd() + "/src/public"));
     this.listen();
   };
-  listen = () => {
-    const port: unknown = process.env.API_PORT;
-    if (port) {
+  listen = (): void => {
+    const port = process.env.API_PORT || 5555;
+    //!For test development environment
+    const isTesting: boolean = process.env.NODE_ENV === "test" || false;
+    if (port && !isTesting) {
       this.app.listen(port, () => {
         console.log(`Port listening at ${port}`);
       });
@@ -20,6 +25,4 @@ class Server {
   };
 }
 
-//! start server
-const server = new Server();
-server.init();
+export default new Server();

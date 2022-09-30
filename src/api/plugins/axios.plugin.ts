@@ -38,11 +38,11 @@ baseHTTP.interceptors.response.use(
     }
     console.error(error.response.data);
     ErrorHandler.basic(error.response.data);
-    const status = statusCodes.find(
+    const statusCode = statusCodes.find(
       (item: IHttpStatus) => item.status === error.response?.status
     );
-    if (status) {
-      console.error(status.msg);
+    if (statusCode) {
+      console.error(statusCode.msg);
     }
   }
 );
