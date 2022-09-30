@@ -3,16 +3,16 @@
 ## Routes
 
 - `:username/profile`
-- `:username/:repo/commits`    
+- `:username/:repo/commits`
 - `:username/repositories`
 
 ## Route Structure
 
 #### Profile
 
-- `:username/user-card`
+- `:username/profile`
 - Allows you to retrieve a user's information such as followers, following, public repositories, gists
-- **_Params_**: `username: string | required` Your Github username E.G. **`/ahmetilhan24/user-card`**
+- **_Params_**: `username: string | required` Your Github username E.G. **`/ahmetilhan24/profile`**
 - **_Response_**:
   **`fullname, username, bio, public repositories, gists, follower, following`**
 - **_Usage_**:
@@ -50,7 +50,7 @@
 
 - `:username/repoName/commits`
 - Lets you get commits of public repositories
-- **_Params_**: `username: string | required, repoName: string | required` Your Github username E.G. **`repos/ahmetilhan24/github-ui-widgets/commits`**
+- **_Params_**: `username: string | required, repoName: string | required` Your Github username E.G. **`ahmetilhan24/github-ui-widgets/commits`**
 - **_Response_**:
   **`commit msg, commit author`**
 - **_Usage_**:

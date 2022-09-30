@@ -8,6 +8,8 @@
 - [**<u>Ahmet ilhan Github Repositories Card</u>**](https://github-ui-widgets.onrender.com/ahmetilhan24/repositories)
 - [**<u>Ahmet ilhan Github Selected Repo Commits</u>**](https://github-ui-widgets.onrender.com/ahmetilhan24/github-ui-widgets/commits)
 
+# Github UI Widget Api
+
 ## Routes
 
 - `:username/profile`
@@ -18,9 +20,9 @@
 
 #### Profile
 
-- `:username/user-card`
+- `:username/profile`
 - Allows you to retrieve a user's information such as followers, following, public repositories, gists
-- **_Params_**: `username: string | required` Your Github username E.G. **`/ahmetilhan24/user-card`**
+- **_Params_**: `username: string | required` Your Github username E.G. **`/ahmetilhan24/profile`**
 - **_Response_**:
   **`fullname, username, bio, public repositories, gists, follower, following`**
 - **_Usage_**:
@@ -29,7 +31,7 @@
     title="Github User Profile"
     width="310px"
     height="340px"
-    src="https://github-ui-widgets.onrender.com/ahmetilhan24/profile"
+    src="http://localhost:5555/ahmetilhan24/profile"
   ></iframe>
   ```
 
@@ -48,7 +50,7 @@
     title="Github User Repositories"
     width="350px"
     height="340px"
-    src="https://github-ui-widgets.onrender.com/ahmetilhan24/repositories"
+    src="http://localhost:5555/ahmetilhan24/repositories"
   ></iframe>
   ```
 
@@ -58,7 +60,7 @@
 
 - `:username/repoName/commits`
 - Lets you get commits of public repositories
-- **_Params_**: `username: string | required, repoName: string | required` Your Github username E.G. **`repos/ahmetilhan24/github-ui-widgets/commits`**
+- **_Params_**: `username: string | required, repoName: string | required` Your Github username E.G. **`ahmetilhan24/github-ui-widgets/commits`**
 - **_Response_**:
   **`commit msg, commit author`**
 - **_Usage_**:
@@ -67,7 +69,7 @@
     title="Github Commits"
     width="350px"
     height="340px"
-    src="https://github-ui-widgets.onrender.com/ahmetilhan24/github-ui-widgets/commits"
+    src="http://localhost:5555/ahmetilhan24/github-ui-widgets/commits"
   ></iframe>
   ```
 
