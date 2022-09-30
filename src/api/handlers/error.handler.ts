@@ -6,7 +6,7 @@ class ErrorHandler {
   private createLog = (type: string, msg: unknown): void => {
     fs.writeFileSync(
       logConstants[type.toUpperCase()].dir +
-        `${type + "_" + dayjs().format()}.txt`,
+        `${type + "_" + dayjs().format()}.log`,
       JSON.stringify(msg)
     );
   };
