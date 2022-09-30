@@ -9,11 +9,11 @@ export default (app: Application) => {
       defaultLayout: "main",
       layoutsDir:
         process.env.NODE_ENV === "production"
-          ? "/views/layouts/"
+          ? process.cwd() + "/views/layouts/"
           : process.cwd() + "/src/views/layouts/",
       partialsDir:
         process.env.NODE_ENV === "production"
-          ? "/views/partials/"
+          ? process.cwd() + "/views/partials/"
           : process.cwd() + "/src/views/partials/",
     })
   );

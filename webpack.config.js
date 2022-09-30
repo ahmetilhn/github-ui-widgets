@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "./src/views", to: "views" }],
+      patterns: [{ from: "./src/views", to: "views" }, { from: "./src/public", to: "public" }],
     }),
   ],
 };
