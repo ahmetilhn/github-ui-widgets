@@ -14,7 +14,7 @@ class Server {
       "/static",
       express.static(
         process.env.NODE_ENV === "production"
-          ? "/dist/public"
+          ? process.cwd() + "/dist/public"
           : process.cwd() + "/src/public"
       )
     );
