@@ -34,12 +34,6 @@
     src="https://github-ui-widgets.onrender.com/ahmetilhan24/profile"
   ></iframe>
   ```
-  <iframe
-        title="Github User Card"
-        width="310px"
-        height="340px"
-        style="border: none"
-        src="https://github-ui-widgets.onrender.com/ahmetilhan24/profile"></iframe>
 
 > Not responsive
 
@@ -59,12 +53,6 @@
     src="https://github-ui-widgets.onrender.com/ahmetilhan24/repositories"
   ></iframe>
   ```
-- <iframe
-       title="Github User Card"
-       width="350px"
-       height="370px"
-       style="border: none"
-       src="https://github-ui-widgets.onrender.com/ahmetilhan24/repositories"></iframe>
 
 > Not responsive
 
@@ -84,12 +72,6 @@
     src="https://github-ui-widgets.onrender.com/ahmetilhan24/github-ui-widgets/commits"
   ></iframe>
   ```
-- <iframe
-       title="Github User Card"
-       width="350px"
-       height="370px"
-       style="border: none"
-       src="https://github-ui-widgets.onrender.com/ahmetilhan24/github-ui-widgets/commits"></iframe>
 
 > Not responsive
 
