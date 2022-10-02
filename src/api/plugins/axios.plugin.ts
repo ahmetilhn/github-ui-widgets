@@ -9,7 +9,7 @@ const baseHTTP: AxiosInstance = axios.create({
   method: "GET",
   timeout: axiosConstants.TIMEOUT,
   headers: {
-    Authorization: `Bearer ${process.env.GIT_TOKEN}`,
+    Authorization: `token ${process.env.GIT_TOKEN}`,
     "Content-Type": "application/json",
   },
   auth: {
