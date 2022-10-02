@@ -20,11 +20,9 @@ class CommitController implements IController {
       });
       return next(errorConstants.BAD_REQUEST);
     }
+    const service = new CommitService(req, res, next);
     const response: AxiosResponse<Array<ICommit>> =
-      await CommitService.getCommitsByRepo(
-        req.params.username,
-        req.params.repo
-      );
+      await service.getCommitsByRepo();
     if (!response) {
       res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return false;

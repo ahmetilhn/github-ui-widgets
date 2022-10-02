@@ -16,9 +16,8 @@ class UserController {
       });
       return next(errorConstants.BAD_REQUEST);
     }
-    const response: AxiosResponse<IUser> = await UserService.getUserByUsername(
-      req.params.username
-    );
+    const service = new UserService(req, res, next);
+    const response: AxiosResponse<IUser> = await service.getUserByUsername();
     if (!response) {
       res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return;
