@@ -9,7 +9,6 @@ class UserService extends BaseService {
   }
   public getUserByUsername = async (): Promise<AxiosResponse> => {
     baseHTTP.defaults.headers["user-agent"] = this.req.headers["user-agent"];
-    console.log(baseHTTP);
     return baseHTTP.get(`/users/${this.req.params.username}`);
   };
 }
