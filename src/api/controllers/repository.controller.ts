@@ -16,8 +16,9 @@ class RepositoryController {
       });
       return next(errorConstants.BAD_REQUEST);
     }
+    const service = new RepositoryService(req, res, next);
     const response: AxiosResponse<IRepository> =
-      await RepositoryService.getReposByUsername(req.params.username);
+      await service.getReposByUsername();
     if (!response) {
       res.status(500).json({ msg: errorConstants.SERVER_ERR });
       return;
